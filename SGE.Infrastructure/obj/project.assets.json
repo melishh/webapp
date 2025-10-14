@@ -1,0 +1,116 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0": {
+      "SGE.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "SGE.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SGE.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SGE.Application.dll": {}
+        }
+      },
+      "SGE.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/SGE.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SGE.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SGE.Application/1.0.0": {
+      "type": "project",
+      "path": "../SGE.Application/SGE.Application.csproj",
+      "msbuildProject": "../SGE.Application/SGE.Application.csproj"
+    },
+    "SGE.Core/1.0.0": {
+      "type": "project",
+      "path": "../SGE.Core/SGE.Core.csproj",
+      "msbuildProject": "../SGE.Core/SGE.Core.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0": [
+      "SGE.Application >= 1.0.0",
+      "SGE.Core >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/maitouarab/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/maitouarab/Bureau/SGE/SGE.Infrastructure/SGE.Infrastructure.csproj",
+      "projectName": "SGE.Infrastructure",
+      "projectPath": "/home/maitouarab/Bureau/SGE/SGE.Infrastructure/SGE.Infrastructure.csproj",
+      "packagesPath": "/home/maitouarab/.nuget/packages/",
+      "outputPath": "/home/maitouarab/Bureau/SGE/SGE.Infrastructure/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/maitouarab/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "projectReferences": {
+            "/home/maitouarab/Bureau/SGE/SGE.Application/SGE.Application.csproj": {
+              "projectPath": "/home/maitouarab/Bureau/SGE/SGE.Application/SGE.Application.csproj"
+            },
+            "/home/maitouarab/Bureau/SGE/SGE.Core/SGE.Core.csproj": {
+              "projectPath": "/home/maitouarab/Bureau/SGE/SGE.Core/SGE.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net8.0": {
+        "targetAlias": "net8.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.405/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

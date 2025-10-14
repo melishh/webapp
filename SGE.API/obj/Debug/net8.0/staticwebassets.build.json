@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "fhD2NuJ0bzcXOoinyBwqz9rXZ8yE6e4CQrUGi/Dn2NA=",
+  "Source": "SGE.API",
+  "BasePath": "_content/SGE.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
