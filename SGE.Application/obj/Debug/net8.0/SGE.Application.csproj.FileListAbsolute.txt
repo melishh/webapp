@@ -8,7 +8,6 @@
 /home/maitouarab/Bureau/SGE/SGE.Application/obj/Debug/net8.0/SGE.Application.AssemblyInfoInputs.cache
 /home/maitouarab/Bureau/SGE/SGE.Application/obj/Debug/net8.0/SGE.Application.AssemblyInfo.cs
 /home/maitouarab/Bureau/SGE/SGE.Application/obj/Debug/net8.0/SGE.Application.csproj.CoreCompileInputs.cache
-/home/maitouarab/Bureau/SGE/SGE.Application/obj/Debug/net8.0/SGE.Application.sourcelink.json
 /home/maitouarab/Bureau/SGE/SGE.Application/obj/Debug/net8.0/SGE.Appl.2AD58D19.Up2Date
 /home/maitouarab/Bureau/SGE/SGE.Application/obj/Debug/net8.0/SGE.Application.dll
 /home/maitouarab/Bureau/SGE/SGE.Application/obj/Debug/net8.0/refint/SGE.Application.dll

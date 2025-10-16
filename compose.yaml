@@ -20,7 +20,7 @@ services:
       dockerfile: SGE.API/Dockerfile
     container_name: sge_api
     ports:
-      - "5000:80"
+      - "5000:8080"
     depends_on:
       - sge.postgres
     environment:

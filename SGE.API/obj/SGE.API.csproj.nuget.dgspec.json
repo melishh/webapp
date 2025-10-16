@@ -29,6 +29,9 @@
               "/home/maitouarab/Bureau/SGE/SGE.Application/SGE.Application.csproj": {
                 "projectPath": "/home/maitouarab/Bureau/SGE/SGE.Application/SGE.Application.csproj"
               },
+              "/home/maitouarab/Bureau/SGE/SGE.Core/SGE.Core.csproj": {
+                "projectPath": "/home/maitouarab/Bureau/SGE/SGE.Core/SGE.Core.csproj"
+              },
               "/home/maitouarab/Bureau/SGE/SGE.Infrastructure/SGE.Infrastructure.csproj": {
                 "projectPath": "/home/maitouarab/Bureau/SGE/SGE.Infrastructure/SGE.Infrastructure.csproj"
               }
@@ -53,6 +56,12 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -247,6 +256,18 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

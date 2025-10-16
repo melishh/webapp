@@ -1,4 +1,5 @@
 /home/maitouarab/Bureau/SGE/SGE.Infrastructure/bin/Debug/net8.0/SGE.Infrastructure.deps.json
+/home/maitouarab/Bureau/SGE/SGE.Infrastructure/bin/Debug/net8.0/SGE.Infrastructure.runtimeconfig.json
 /home/maitouarab/Bureau/SGE/SGE.Infrastructure/bin/Debug/net8.0/SGE.Infrastructure.dll
 /home/maitouarab/Bureau/SGE/SGE.Infrastructure/bin/Debug/net8.0/SGE.Infrastructure.pdb
 /home/maitouarab/Bureau/SGE/SGE.Infrastructure/bin/Debug/net8.0/SGE.Application.dll
@@ -10,9 +11,9 @@
 /home/maitouarab/Bureau/SGE/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.AssemblyInfoInputs.cache
 /home/maitouarab/Bureau/SGE/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.AssemblyInfo.cs
 /home/maitouarab/Bureau/SGE/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.csproj.CoreCompileInputs.cache
-/home/maitouarab/Bureau/SGE/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.sourcelink.json
 /home/maitouarab/Bureau/SGE/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infr.9229B0D7.Up2Date
 /home/maitouarab/Bureau/SGE/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.dll
 /home/maitouarab/Bureau/SGE/SGE.Infrastructure/obj/Debug/net8.0/refint/SGE.Infrastructure.dll
 /home/maitouarab/Bureau/SGE/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.pdb
+/home/maitouarab/Bureau/SGE/SGE.Infrastructure/obj/Debug/net8.0/SGE.Infrastructure.genruntimeconfig.cache
 /home/maitouarab/Bureau/SGE/SGE.Infrastructure/obj/Debug/net8.0/ref/SGE.Infrastructure.dll
