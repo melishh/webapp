@@ -1,12 +1,7 @@
-namespace SGE.Application.DTOs;
+namespace SGE.Application.DTOs.Departments;
 
-public class DepartmentDto
+public class DepartmentCreateDto
 {
-    /// <summary>
-    /// Gets or sets the unique identifier for the department.
-    /// </summary>
-    public int Id { get; set; }
-
     /// <summary>
     /// Gets or sets the name of the department.
     /// </summary>

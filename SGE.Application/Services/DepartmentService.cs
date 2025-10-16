@@ -1,5 +1,5 @@
 using AutoMapper;
-using SGE.Application.DTOs;
+using SGE.Application.DTOs.Departments;
 using SGE.Application.Interfaces.Repositories;
 using SGE.Application.Interfaces.Services;
 using SGE.Core.Entities;

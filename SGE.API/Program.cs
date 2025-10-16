@@ -24,6 +24,7 @@ builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 
 // Services
 builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 
 // Add services to the container.
 builder.Services.AddControllers();

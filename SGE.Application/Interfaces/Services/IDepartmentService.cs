@@ -1,4 +1,4 @@
-using SGE.Application.DTOs;
+using SGE.Application.DTOs.Departments;
 
 namespace SGE.Application.Interfaces.Services;
 
