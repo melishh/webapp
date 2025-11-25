@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/maitouarab/Bureau/SGE/SGE.Application/SGE.Application.csproj": {}
+    "/home/maitouarab/Bureau/service_web/SGE/SGE.Application/SGE.Application.csproj": {}
   },
   "projects": {
-    "/home/maitouarab/Bureau/SGE/SGE.Application/SGE.Application.csproj": {
+    "/home/maitouarab/Bureau/service_web/SGE/SGE.Application/SGE.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/maitouarab/Bureau/SGE/SGE.Application/SGE.Application.csproj",
+        "projectUniqueName": "/home/maitouarab/Bureau/service_web/SGE/SGE.Application/SGE.Application.csproj",
         "projectName": "SGE.Application",
-        "projectPath": "/home/maitouarab/Bureau/SGE/SGE.Application/SGE.Application.csproj",
+        "projectPath": "/home/maitouarab/Bureau/service_web/SGE/SGE.Application/SGE.Application.csproj",
         "packagesPath": "/home/maitouarab/.nuget/packages/",
-        "outputPath": "/home/maitouarab/Bureau/SGE/SGE.Application/obj/",
+        "outputPath": "/home/maitouarab/Bureau/service_web/SGE/SGE.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/maitouarab/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/maitouarab/Bureau/SGE/SGE.Core/SGE.Core.csproj": {
-                "projectPath": "/home/maitouarab/Bureau/SGE/SGE.Core/SGE.Core.csproj"
+              "/home/maitouarab/Bureau/service_web/SGE/SGE.Core/SGE.Core.csproj": {
+                "projectPath": "/home/maitouarab/Bureau/service_web/SGE/SGE.Core/SGE.Core.csproj"
               }
             }
           }
@@ -50,6 +50,18 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[15.0.1, )"
+            },
+            "ExcelDataReader": {
+              "target": "Package",
+              "version": "[3.7.1, )"
+            },
+            "ExcelDataReader.DataSet": {
+              "target": "Package",
+              "version": "[3.7.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.15.0, )"
             }
           },
           "imports": [
@@ -72,14 +84,14 @@
         }
       }
     },
-    "/home/maitouarab/Bureau/SGE/SGE.Core/SGE.Core.csproj": {
+    "/home/maitouarab/Bureau/service_web/SGE/SGE.Core/SGE.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/maitouarab/Bureau/SGE/SGE.Core/SGE.Core.csproj",
+        "projectUniqueName": "/home/maitouarab/Bureau/service_web/SGE/SGE.Core/SGE.Core.csproj",
         "projectName": "SGE.Core",
-        "projectPath": "/home/maitouarab/Bureau/SGE/SGE.Core/SGE.Core.csproj",
+        "projectPath": "/home/maitouarab/Bureau/service_web/SGE/SGE.Core/SGE.Core.csproj",
         "packagesPath": "/home/maitouarab/.nuget/packages/",
-        "outputPath": "/home/maitouarab/Bureau/SGE/SGE.Core/obj/",
+        "outputPath": "/home/maitouarab/Bureau/service_web/SGE/SGE.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/maitouarab/.nuget/NuGet/NuGet.Config"
@@ -110,6 +122,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

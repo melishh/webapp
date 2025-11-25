@@ -3,6 +3,7 @@ using SGE.Application.DTOs.Employees;
 using SGE.Application.Interfaces.Repositories;
 using SGE.Application.Interfaces.Services;
 using SGE.Core.Entities;
+using SGE.Core.Exceptions;
 
 namespace SGE.Application.Services;
 
@@ -30,7 +31,10 @@ public class EmployeeService(IEmployeeRepository employeeRepository, IDepartment
     public async Task<EmployeeDto?> GetByIdAsync(int id, CancellationToken cancellationToken = default)
     {
         var emp = await employeeRepository.GetByIdAsync(id, cancellationToken);
-        return emp == null ? null : mapper.Map<EmployeeDto>(emp);
+        if (emp == null)
+            throw new EmployeeNotFoundException(id);
+
+        return mapper.Map<EmployeeDto>(emp);
     }
 
     /// <summary>
@@ -63,16 +67,18 @@ public class EmployeeService(IEmployeeRepository employeeRepository, IDepartment
     /// <param name="dto">The data transfer object containing details of the employee to be created.</param>
     /// <param name="cancellationToken">Token to monitor for cancellation requests.</param>
     /// <returns>A task that represents the asynchronous operation. The task result contains the created EmployeeDto object.</returns>
-    /// <exception cref="ApplicationException">Thrown if the specified department does not exist or if the email is already associated with another employee.</exception>
+    /// <exception cref="DepartmentNotFoundException">Thrown if the specified department does not exist.</exception>
+    /// <exception cref="InvalidEmployeeDataException">Thrown if the email is already associated with another employee.</exception>
     public async Task<EmployeeDto> CreateAsync(EmployeeCreateDto dto, CancellationToken cancellationToken = default)
     {
         var department = await departmentRepository.GetByIdAsync(dto.DepartmentId, cancellationToken);
         if (department == null)
-            throw new ApplicationException("Il n'existe aucun departement avec cet identifiant");
+            throw new DepartmentNotFoundException(dto.DepartmentId);
 
         var existingEmployee = await employeeRepository.GetByEmailAsync(dto.Email, cancellationToken);
+
         if (existingEmployee != null)
-            throw new ApplicationException("Cet email existe déjà pour un autre employée");
+            throw new InvalidEmployeeDataException("Cet email existe déjà pour un autre employé");
 
         var entity = mapper.Map<Employee>(dto);
         await employeeRepository.AddAsync(entity, cancellationToken);
@@ -87,9 +93,24 @@ public class EmployeeService(IEmployeeRepository employeeRepository, IDepartment
     /// <param name="dto">An object containing the updated details of the employee.</param>
     /// <param name="cancellationToken">Token to monitor for cancellation requests.</param>
     /// <returns>A task that represents the asynchronous operation. The task result indicates whether the update operation was successful.</returns>
+    /// <exception cref="DepartmentNotFoundException">Thrown if the specified department does not exist.</exception>
     public async Task<bool> UpdateAsync(int id, EmployeeUpdateDto dto, CancellationToken cancellationToken = default)
     {
-        // TODO
+        // Verify that the employee exists
+        var employee = await employeeRepository.GetByIdAsync(id, cancellationToken);
+        if (employee == null)
+            return false;
+
+        // Verify that the new department exists
+        var department = await departmentRepository.GetByIdAsync(dto.DepartmentId, cancellationToken);
+        if (department == null)
+            throw new DepartmentNotFoundException(dto.DepartmentId);
+
+        // Map the DTO properties to the employee entity
+        mapper.Map(dto, employee);
+
+        // Update the employee in the repository
+        await employeeRepository.UpdateAsync(employee, cancellationToken);
         return true;
     }
 
@@ -101,7 +122,13 @@ public class EmployeeService(IEmployeeRepository employeeRepository, IDepartment
     /// <returns>A task that represents the asynchronous operation. The task result contains a boolean value indicating whether the deletion was successful.</returns>
     public async Task<bool> DeleteAsync(int id, CancellationToken cancellationToken = default)
     {
-        // TODO
+        // Verify that the employee exists
+        var employee = await employeeRepository.GetByIdAsync(id, cancellationToken);
+        if (employee == null)
+            return false;
+
+        // Delete the employee from the repository
+        await employeeRepository.DeleteAsync(id, cancellationToken);
         return true;
     }
 }

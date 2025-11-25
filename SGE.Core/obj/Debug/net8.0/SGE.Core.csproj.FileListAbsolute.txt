@@ -9,3 +9,15 @@
 /home/maitouarab/Bureau/SGE/SGE.Core/obj/Debug/net8.0/refint/SGE.Core.dll
 /home/maitouarab/Bureau/SGE/SGE.Core/obj/Debug/net8.0/SGE.Core.pdb
 /home/maitouarab/Bureau/SGE/SGE.Core/obj/Debug/net8.0/ref/SGE.Core.dll
+/home/maitouarab/Bureau/service_web/SGE/SGE.Core/bin/Debug/net8.0/SGE.Core.deps.json
+/home/maitouarab/Bureau/service_web/SGE/SGE.Core/bin/Debug/net8.0/SGE.Core.dll
+/home/maitouarab/Bureau/service_web/SGE/SGE.Core/bin/Debug/net8.0/SGE.Core.pdb
+/home/maitouarab/Bureau/service_web/SGE/SGE.Core/obj/Debug/net8.0/SGE.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/maitouarab/Bureau/service_web/SGE/SGE.Core/obj/Debug/net8.0/SGE.Core.AssemblyInfoInputs.cache
+/home/maitouarab/Bureau/service_web/SGE/SGE.Core/obj/Debug/net8.0/SGE.Core.AssemblyInfo.cs
+/home/maitouarab/Bureau/service_web/SGE/SGE.Core/obj/Debug/net8.0/SGE.Core.csproj.CoreCompileInputs.cache
+/home/maitouarab/Bureau/service_web/SGE/SGE.Core/obj/Debug/net8.0/SGE.Core.dll
+/home/maitouarab/Bureau/service_web/SGE/SGE.Core/obj/Debug/net8.0/refint/SGE.Core.dll
+/home/maitouarab/Bureau/service_web/SGE/SGE.Core/obj/Debug/net8.0/SGE.Core.pdb
+/home/maitouarab/Bureau/service_web/SGE/SGE.Core/obj/Debug/net8.0/ref/SGE.Core.dll
+/home/maitouarab/Bureau/service_web/SGE/SGE.Core/obj/Debug/net8.0/SGE.Core.csproj.AssemblyReference.cache

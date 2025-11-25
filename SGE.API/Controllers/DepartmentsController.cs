@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using SGE.Application.DTOs;
+using SGE.Application.DTOs.Departments;
 using SGE.Application.Interfaces.Services;
 
 namespace SGE.API.Controllers;
@@ -29,12 +29,11 @@ public class DepartmentsController(IDepartmentService departmentService) : Contr
     /// </summary>
     /// <param name="id">The unique identifier of the department to retrieve.</param>
     /// <param name="cancellationToken">A token to cancel the operation.</param>
-    /// <returns>An <see cref="ActionResult"/> containing the <see cref="DepartmentDto"/> of the specified department if found, otherwise a NotFound result.</returns>
+    /// <returns>An <see cref="ActionResult"/> containing the <see cref="DepartmentDto"/> of the specified department.</returns>
     [HttpGet("{id:int}")]
     public async Task<ActionResult<DepartmentDto>> GetById(int id, CancellationToken cancellationToken)
     {
         var dept = await departmentService.GetByIdAsync(id, cancellationToken);
-        if (dept == null) return NotFound();
         return Ok(dept);
     }
 
@@ -57,12 +56,11 @@ public class DepartmentsController(IDepartmentService departmentService) : Contr
     /// <param name="id">The unique identifier of the department to update.</param>
     /// <param name="dto">The data transfer object containing the updated details of the department.</param>
     /// <param name="cancellationToken">A token to cancel the asynchronous operation.</param>
-    /// <returns>An <see cref="IActionResult"/> indicating the result of the update operation. Returns <see cref="NoContentResult"/> if successful, or <see cref="NotFoundResult"/> if the department is not found.</returns>
+    /// <returns>An <see cref="IActionResult"/> indicating the result of the update operation.</returns>
     [HttpPut("{id:int}")]
     public async Task<IActionResult> Update(int id, DepartmentUpdateDto dto, CancellationToken cancellationToken)
     {
-        var ok = await departmentService.UpdateAsync(id, dto, cancellationToken);
-        if (!ok) return NotFound();
+        await departmentService.UpdateAsync(id, dto, cancellationToken);
         return NoContent();
     }
 
@@ -71,12 +69,11 @@ public class DepartmentsController(IDepartmentService departmentService) : Contr
     /// </summary>
     /// <param name="id">The unique identifier of the department to delete.</param>
     /// <param name="cancellationToken">A token to cancel the operation.</param>
-    /// <returns>An <see cref="IActionResult"/> indicating the result of the operation. Returns NoContent if successful, otherwise NotFound if the department does not exist.</returns>
+    /// <returns>An <see cref="IActionResult"/> indicating the result of the operation.</returns>
     [HttpDelete("{id:int}")]
     public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)
     {
-        var ok = await departmentService.DeleteAsync(id, cancellationToken);
-        if (!ok) return NotFound();
+        await departmentService.DeleteAsync(id, cancellationToken);
         return NoContent();
     }
 }

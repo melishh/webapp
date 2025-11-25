@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/maitouarab/Bureau/SGE/SGE.Core/SGE.Core.csproj": {}
+    "/home/maitouarab/Bureau/service_web/SGE/SGE.Core/SGE.Core.csproj": {}
   },
   "projects": {
-    "/home/maitouarab/Bureau/SGE/SGE.Core/SGE.Core.csproj": {
+    "/home/maitouarab/Bureau/service_web/SGE/SGE.Core/SGE.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/maitouarab/Bureau/SGE/SGE.Core/SGE.Core.csproj",
+        "projectUniqueName": "/home/maitouarab/Bureau/service_web/SGE/SGE.Core/SGE.Core.csproj",
         "projectName": "SGE.Core",
-        "projectPath": "/home/maitouarab/Bureau/SGE/SGE.Core/SGE.Core.csproj",
+        "projectPath": "/home/maitouarab/Bureau/service_web/SGE/SGE.Core/SGE.Core.csproj",
         "packagesPath": "/home/maitouarab/.nuget/packages/",
-        "outputPath": "/home/maitouarab/Bureau/SGE/SGE.Core/obj/",
+        "outputPath": "/home/maitouarab/Bureau/service_web/SGE/SGE.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/maitouarab/.nuget/NuGet/NuGet.Config"
@@ -42,6 +42,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
