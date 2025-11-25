@@ -248,3 +248,6 @@
 /home/maitouarab/Bureau/service_web/SGE/SGE.API/obj/Debug/net8.0/ref/SGE.API.dll
 /home/maitouarab/Bureau/service_web/SGE/SGE.API/bin/Debug/net8.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 /home/maitouarab/Bureau/service_web/SGE/SGE.API/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/maitouarab/Bureau/service_web/SGE/SGE.API/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/maitouarab/Bureau/service_web/SGE/SGE.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/maitouarab/Bureau/service_web/SGE/SGE.API/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

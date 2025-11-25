@@ -18,7 +18,9 @@ public class TokenService(
     public string GenerateAccessToken(ApplicationUser user, IList<string> roles)
     {
         var jwtSettings = configuration.GetSection("JwtSettings");
-        var secret = Encoding.ASCII.GetBytes(jwtSettings["Secret"]!);
+
+
+        var secret = Encoding.ASCII.GetBytes(jwtSettings["Key"]!);
 
         var claims = new List<Claim>
         {
@@ -64,7 +66,9 @@ public class TokenService(
     public ClaimsPrincipal GetPrincipalFromExpiredToken(string token)
     {
         var jwtSettings = configuration.GetSection("JwtSettings");
-        var secret = Encoding.ASCII.GetBytes(jwtSettings["Secret"]!);
+
+
+        var secret = Encoding.ASCII.GetBytes(jwtSettings["Key"]!);
 
         var tokenValidationParameters = new TokenValidationParameters
         {
